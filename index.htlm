@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 💖</title>
+<style>
+  body {
+    background: #000;
+    color: pink;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  button {
+    padding: 12px 25px;
+    margin: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .yes {
+    background-color: hotpink;
+    color: black;
+  }
+
+  .no {
+    background-color: gray;
+    color: black;
+  }
+</style>
+</head>
+
+<body>
+
+<h1 id="text">Will you be my Valentine? 💌</h1>
+
+<div id="buttons">
+  <button class="yes" onclick="yesClick()">Yes 💖</button>
+  <button class="no" onclick="noClick()">No 💀</button>
+</div>
+
+<script>
+  function noClick() {
+    document.getElementById("text").innerHTML =
+      "Did you just click NO? 😠<br><br>" +
+      "No boobie privileges from today 😤<br><br>" +
+      "Go back and change your decision 😌";
+
+    document.getElementById("buttons").innerHTML =
+      '<button class="yes" onclick="goBack()">Go Back 🔁</button>';
+  }
+
+  function goBack() {
+    document.getElementById("text").innerHTML =
+      "Will you be my Valentine? 💌";
+
+    document.getElementById("buttons").innerHTML =
+      '<button class="yes" onclick="yesClick()">Yes 💖</button>' +
+      '<button class="no" onclick="noClick()">No 💀</button>';
+  }
+
+  function yesClick() {
+    document.getElementById("text").innerHTML =
+      "I love you my baby ❤️<br>My Valentine 💘🥰";
+
+    document.getElementById("buttons").innerHTML = "";
+  }
+</script>
+
+</body>
+</html>
